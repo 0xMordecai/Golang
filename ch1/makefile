@@ -1,14 +1,14 @@
 .DEFAULT_GOAL := build
 fmt:
-	go fmt ./...
+	go fmt hello.go
 .PHONY:fmt
 
 lint: fmt
-	golint ./...
+	golint hello.go
 .PHONY:lint
 
 vet: fmt
-	go vet ./...
+	go vet hello.go
 .PHONY:vet
 
 build: vet
